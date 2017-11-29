@@ -4,6 +4,8 @@
 
 Create an app where you can search for a tv show.  Selecting a show should display a list of all episodes in the TV show.  Selecting an episode should display a detail view controller with more information about the episode.
 
+![Sample gif](https://github.com/C4Q/AC-iOS-EpisodesFromOnline-HW/blob/master/gif1.gif)
+
 ## Documentation:
 
 [https://www.tvmaze.com/api](https://www.tvmaze.com/api)
