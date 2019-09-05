@@ -53,4 +53,4 @@ Your view controller should contain:
 
 # Rubric
 
-![rubric]()
+![rubric](rubric.png)
