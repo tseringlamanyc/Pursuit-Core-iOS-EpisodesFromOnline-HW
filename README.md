@@ -53,14 +53,4 @@ Your view controller should contain:
 
 # Rubric
 
-|Criterion|Points|
-|---|---|
-| App correctly uses Auto Layout for all portrait iPhones | 4 |
-| Variable Naming and Readability | 4 |
-| Loads an array of Shows into a tableView based on a search term | 8 |
-| Show tableviewcell is correctly configured | 4 |
-| Loads an array of Episodes into a tableView based on a segue | 4 |
-| Episode tableviewcell is correctly configured | 4 |
-| Episode Detail View Controller is correctly configured | 4 |
-| Images load when available and without flickering | 4 |
-| A UIActivityIndicator is displayed while images are loading | 4 |
+![rubric]()
