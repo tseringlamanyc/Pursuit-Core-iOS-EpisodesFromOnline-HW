@@ -1,4 +1,4 @@
-# Unit 3 Week 2 HW - Getting Data from Online
+# Unit 3 Project 2 - Getting Data from Online
 
 ## Summary
 
