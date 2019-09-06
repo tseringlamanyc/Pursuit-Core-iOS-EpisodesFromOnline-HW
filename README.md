@@ -17,7 +17,7 @@ Your view controller should contain:
 - A table view
 - A search bar
 
-Entering a search term should make a request to load shows matching that description into the table view.  Your tableViewCell should have:
+Entering a search term should make a request to the API that loads information matching that description into the table view.  Your tableViewCell should have:
 
 - An image of the show
 - The name of the show
