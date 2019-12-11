@@ -14,4 +14,25 @@ class EpisodesTableViewCell: UITableViewCell {
     @IBOutlet weak var episodeName: UILabel!
     @IBOutlet weak var seasonText: UILabel!
     
+    
+    func loadCell(episode: Episode) {
+        episodeName.text = episode.name
+        seasonText.text = "S\(episode.season) E\(episode.number)"
+        
+        guard let episodeImage = episode.images?.medium else {
+            return
+        }
+        
+        NetworkHelper.shared.performDataTask(userurl: episodeImage) { (result) in
+            switch result {
+            case .failure(let appError):
+                print("\(appError)")
+            case .success(let data):
+                DispatchQueue.main.async {
+                    let image = UIImage(data: data)
+                    self.episodeImage.image = image
+                }
+            }
+        }
+    }
 }
