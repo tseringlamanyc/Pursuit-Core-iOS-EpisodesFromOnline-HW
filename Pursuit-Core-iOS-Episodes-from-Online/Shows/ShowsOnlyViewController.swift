@@ -39,8 +39,8 @@ class ShowsOnlyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.delegate = self 
         showSearch.delegate = self
+        title = "Shows"
     }
     
     func getShows(searchInput: String) {
@@ -57,7 +57,7 @@ class ShowsOnlyViewController: UIViewController {
     }
 }
 
-extension ShowsOnlyViewController : UITableViewDataSource, UITableViewDelegate {
+extension ShowsOnlyViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shows.count
     }
@@ -71,9 +71,9 @@ extension ShowsOnlyViewController : UITableViewDataSource, UITableViewDelegate {
         return showCell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 400
+//    }
 }
 
 extension ShowsOnlyViewController: UISearchBarDelegate {

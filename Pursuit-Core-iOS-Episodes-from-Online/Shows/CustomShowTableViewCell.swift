@@ -16,12 +16,15 @@ class CustomShowTableViewCell: UITableViewCell {
     
     func loadCell(show: ShowsData) {
         showName.text = show.show?.name
-        guard let rating = show.show?.rating?.average else {
+        let rating = show.show?.rating?.average
+        
+        showRating.text = "Rating: \(rating?.description ?? "N/A")"
+        
+        guard let imageURL = show.show?.image?.medium else {
             return
         }
-        showRating.text = "Rating: \(rating.description)"
         
-        NetworkHelper.shared.performDataTask(userurl: show.show?.image?.medium ?? "") { (result) in
+        NetworkHelper.shared.performDataTask(userurl: imageURL) { (result) in
             switch result {
             case .failure(let appError):
                 print("\(appError)")
