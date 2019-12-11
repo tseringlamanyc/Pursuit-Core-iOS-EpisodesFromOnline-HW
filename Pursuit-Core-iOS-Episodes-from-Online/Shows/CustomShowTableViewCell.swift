@@ -18,5 +18,17 @@ class CustomShowTableViewCell: UITableViewCell {
     func loadCell(show: Shows) {
         showName.text = show.name
         showRating.text = "Rating:\(show.rating.average)"
+        
+        NetworkHelper.shared.performDataTask(userurl: show.image.medium) { (result) in
+            switch result {
+            case .failure(let appError):
+                print("\(appError)")
+            case .success(let data):
+                DispatchQueue.main.async {
+                    let image = UIImage(data: data)
+                    self.showImage.image = image
+                }
+            }
+        }
     }
 }

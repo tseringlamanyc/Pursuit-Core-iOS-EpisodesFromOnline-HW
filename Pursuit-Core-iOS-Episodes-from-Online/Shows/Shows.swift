@@ -20,7 +20,7 @@ struct Shows: Decodable {
 }
 
 struct Rating: Decodable {
-    let average: Double
+    let average: Double?
 }
 
 struct Images: Decodable {
