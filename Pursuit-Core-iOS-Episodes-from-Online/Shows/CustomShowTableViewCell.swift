@@ -14,12 +14,14 @@ class CustomShowTableViewCell: UITableViewCell {
     @IBOutlet weak var showName: UILabel!
     @IBOutlet weak var showRating: UILabel!
     
-    
     func loadCell(show: ShowsData) {
         showName.text = show.show?.name
-        showRating.text = "Rating:\(show.show?.rating?.average ?? 0.0)"
+        guard let rating = show.show?.rating?.average else {
+            return
+        }
+        showRating.text = "Rating: \(rating.description)"
         
-        NetworkHelper.shared.performDataTask(userurl: show.show?.image.medium ?? "") { (result) in
+        NetworkHelper.shared.performDataTask(userurl: show.show?.image?.medium ?? "") { (result) in
             switch result {
             case .failure(let appError):
                 print("\(appError)")
