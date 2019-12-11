@@ -17,6 +17,7 @@ struct Shows: Decodable {
     let name: String
     let rating: Rating
     let image: Images
+    let type: String
 }
 
 struct Rating: Decodable {
