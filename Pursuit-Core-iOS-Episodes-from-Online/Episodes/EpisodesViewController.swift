@@ -25,6 +25,7 @@ class EpisodesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         loadEpisode(episodeID: show.show?.id ?? 0)
+        title = "Episodes"
     }
     
     func loadEpisode(episodeID: Int) {

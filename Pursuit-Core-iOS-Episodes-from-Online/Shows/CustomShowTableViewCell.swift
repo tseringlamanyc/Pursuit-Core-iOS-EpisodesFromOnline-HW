@@ -20,9 +20,7 @@ class CustomShowTableViewCell: UITableViewCell {
         
         showRating.text = "Rating: \(rating?.description ?? "N/A")"
         
-        guard let imageURL = show.show?.image?.original else {
-            return
-        }
+         let imageURL = show.show?.image?.original ?? "https://avatars3.githubusercontent.com/u/1819208?s=400&v=4"
         
         NetworkHelper.shared.performDataTask(userurl: imageURL) { (result) in
             switch result {

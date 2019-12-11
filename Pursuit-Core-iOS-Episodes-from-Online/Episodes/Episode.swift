@@ -12,10 +12,10 @@ struct Episode: Decodable {
     let name: String
     let season: Int
     let number: Int
-    let images: Picture?
+    let image: EpisodeImage?
 }
 
-struct Picture: Decodable {
+struct EpisodeImage: Decodable {
     let medium: String
     let original: String
 }

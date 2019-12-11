@@ -19,7 +19,7 @@ class EpisodesTableViewCell: UITableViewCell {
         episodeName.text = episode.name
         seasonText.text = "S\(episode.season) E\(episode.number)"
         
-         let episodeImage = episode.images?.medium ?? ""
+        let episodeImage = episode.image?.original ?? "https://cdn.shopify.com/s/files/1/1383/1481/t/3/assets/logo.png?90"
         
         NetworkHelper.shared.performDataTask(userurl: episodeImage) { (result) in
             switch result {
