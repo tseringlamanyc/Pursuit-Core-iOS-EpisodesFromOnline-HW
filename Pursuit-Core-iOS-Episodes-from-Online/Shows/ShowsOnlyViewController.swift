@@ -8,8 +8,15 @@
 
 import UIKit
 
-class ShowViewController: UIViewController {
-
+class ShowsOnlyViewController: UIViewController {
+    
+    @IBOutlet weak var showSearch: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var searchInput = ""
+    
+    var shows = [Shows]() 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
