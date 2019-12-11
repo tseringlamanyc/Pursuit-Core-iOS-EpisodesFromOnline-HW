@@ -10,7 +10,7 @@
 		5221831123A0A4C600E75ADF /* CustomShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221831023A0A4C600E75ADF /* CustomShowTableViewCell.swift */; };
 		5226A22723A09BA1001C084D /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226A22623A09BA1001C084D /* NetworkHelper.swift */; };
 		5226A22923A09BBE001C084D /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226A22823A09BBE001C084D /* AppError.swift */; };
-		5226A22B23A09C15001C084D /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226A22A23A09C15001C084D /* Shows.swift */; };
+		5226A22B23A09C15001C084D /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226A22A23A09C15001C084D /* Show.swift */; };
 		5226A22D23A09C20001C084D /* ShowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226A22C23A09C20001C084D /* ShowAPI.swift */; };
 		CD01CD5C232178AF002D0255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CD5B232178AF002D0255 /* AppDelegate.swift */; };
 		CD01CD5E232178AF002D0255 /* ShowsOnlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CD5D232178AF002D0255 /* ShowsOnlyViewController.swift */; };
@@ -34,7 +34,7 @@
 		5221831023A0A4C600E75ADF /* CustomShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShowTableViewCell.swift; sourceTree = "<group>"; };
 		5226A22623A09BA1001C084D /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		5226A22823A09BBE001C084D /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		5226A22A23A09C15001C084D /* Shows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shows.swift; sourceTree = "<group>"; };
+		5226A22A23A09C15001C084D /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		5226A22C23A09C20001C084D /* ShowAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAPI.swift; sourceTree = "<group>"; };
 		CD01CD58232178AF002D0255 /* Pursuit-Core-iOS-Episodes-from-Online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pursuit-Core-iOS-Episodes-from-Online.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD01CD5B232178AF002D0255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		5226A22423A09B45001C084D /* Shows */ = {
 			isa = PBXGroup;
 			children = (
-				5226A22A23A09C15001C084D /* Shows.swift */,
+				5226A22A23A09C15001C084D /* Show.swift */,
 				5226A22C23A09C20001C084D /* ShowAPI.swift */,
 				5221831023A0A4C600E75ADF /* CustomShowTableViewCell.swift */,
 				CD01CD5D232178AF002D0255 /* ShowsOnlyViewController.swift */,
@@ -228,7 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5226A22B23A09C15001C084D /* Shows.swift in Sources */,
+				5226A22B23A09C15001C084D /* Show.swift in Sources */,
 				5226A22923A09BBE001C084D /* AppError.swift in Sources */,
 				CD01CD5E232178AF002D0255 /* ShowsOnlyViewController.swift in Sources */,
 				5226A22723A09BA1001C084D /* NetworkHelper.swift in Sources */,

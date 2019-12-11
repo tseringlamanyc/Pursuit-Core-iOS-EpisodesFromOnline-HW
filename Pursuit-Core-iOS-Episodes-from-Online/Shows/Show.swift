@@ -9,13 +9,13 @@
 import Foundation
 
 struct ShowsData: Decodable {
-    let show: Shows
+    let show: Show?
 }
 
-struct Shows: Decodable {
+struct Show: Decodable {
     let id: Int
     let name: String
-    let rating: Rating
+    let rating: Rating?
     let image: Images
     let type: String
 }

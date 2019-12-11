@@ -13,21 +13,38 @@ class ShowsOnlyViewController: UIViewController {
     @IBOutlet weak var showSearch: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var currentSearch = ""
+    var currentSearch = "" {
+        didSet {
+            ShowsAPI.getShows(userSearch: currentSearch) { (result) in
+                switch result {
+                case .failure(let appError):
+                    print("\(appError)")
+                case .success(let shows):
+                    DispatchQueue.main.async {
+                        self.shows = shows.filter {($0.show?.name.lowercased().contains(self.currentSearch.lowercased()) ?? false)}
+                    }
+                }
+            }
+        }
+    }
     
-    var shows = [Shows]()
-    
-    
+    var shows = [ShowsData]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self 
         showSearch.delegate = self
     }
     
     func getShows(searchInput: String) {
-        currentSearch = searchInput
-        _ = ShowsAPI.getShows(userSearch: searchInput) { (result) in
+        ShowsAPI.getShows(userSearch: searchInput) { (result) in
             switch result {
             case .failure(let appError):
                 print("\(appError)")
@@ -38,13 +55,9 @@ class ShowsOnlyViewController: UIViewController {
             }
         }
     }
-    
-    func searchingShows() {
-        shows = shows.filter {$0.name.lowercased().contains(currentSearch.lowercased())}
-    }
 }
 
-extension ShowsOnlyViewController : UITableViewDataSource {
+extension ShowsOnlyViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shows.count
     }
@@ -57,17 +70,16 @@ extension ShowsOnlyViewController : UITableViewDataSource {
         showCell.loadCell(show: aShow)
         return showCell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 400
+    }
 }
 
 extension ShowsOnlyViewController: UISearchBarDelegate {
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        currentSearch = searchText
-        searchingShows()
-        getShows(searchInput: searchText)
+        currentSearch = searchBar.text!
+       
     }
 }
