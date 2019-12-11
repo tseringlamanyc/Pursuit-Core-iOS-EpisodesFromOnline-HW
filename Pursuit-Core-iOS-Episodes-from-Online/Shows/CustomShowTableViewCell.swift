@@ -20,7 +20,7 @@ class CustomShowTableViewCell: UITableViewCell {
         
         showRating.text = "Rating: \(rating?.description ?? "N/A")"
         
-        guard let imageURL = show.show?.image?.medium else {
+        guard let imageURL = show.show?.image?.original else {
             return
         }
         
