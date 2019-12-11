@@ -99,8 +99,8 @@
 			children = (
 				52D54FDA23A1933500C5E00C /* Episode.swift */,
 				52D54FDC23A1934300C5E00C /* EpisodesAPI.swift */,
-				52D54FD723A192FA00C5E00C /* EpisodesViewController.swift */,
 				52D54FD523A192E900C5E00C /* EpisodesTableViewCell.swift */,
+				52D54FD723A192FA00C5E00C /* EpisodesViewController.swift */,
 			);
 			path = Episodes;
 			sourceTree = "<group>";

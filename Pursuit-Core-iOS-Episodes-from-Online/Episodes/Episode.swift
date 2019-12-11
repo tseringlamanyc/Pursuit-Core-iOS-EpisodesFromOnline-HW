@@ -17,4 +17,5 @@ struct Episode: Decodable {
 
 struct Picture: Decodable {
     let medium: String
+    let original: String
 }

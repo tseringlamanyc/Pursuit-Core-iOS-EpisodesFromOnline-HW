@@ -55,6 +55,13 @@ class ShowsOnlyViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? EpisodesViewController, let indexpath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        detailVC.show = shows[indexpath.row]
+    }
 }
 
 extension ShowsOnlyViewController : UITableViewDataSource {
