@@ -40,6 +40,13 @@ class EpisodesViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let summaryVC = segue.destination as? SummaryViewController, let indexpath = tableView.indexPathForSelectedRow else {
+            fatalError()
+        }
+        summaryVC.episode = episode[indexpath.row]
+    }
 }
 
 extension EpisodesViewController: UITableViewDataSource, UITableViewDelegate {

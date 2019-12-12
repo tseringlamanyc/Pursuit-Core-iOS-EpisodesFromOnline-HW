@@ -12,7 +12,8 @@ struct ShowsAPI {
     
     static func getShows(userSearch: String, completionHandler: @escaping (Result<[ShowsData], AppError>) -> ()) {
         
-        let showsURL = "https://api.tvmaze.com/search/shows?q=\(userSearch)"
+        let userSearch = userSearch.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        let showsURL = "https://api.tvmaze.com/search/shows?q=\(userSearch ?? "")"
         
         NetworkHelper.shared.performDataTask(userurl: showsURL) { (result) in
             switch result {

@@ -16,6 +16,9 @@
 		52D54FD823A192FA00C5E00C /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D54FD723A192FA00C5E00C /* EpisodesViewController.swift */; };
 		52D54FDB23A1933500C5E00C /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D54FDA23A1933500C5E00C /* Episode.swift */; };
 		52D54FDD23A1934300C5E00C /* EpisodesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D54FDC23A1934300C5E00C /* EpisodesAPI.swift */; };
+		52DEFED923A1A83500EA2E59 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEFED823A1A83500EA2E59 /* Details.swift */; };
+		52DEFEDB23A1A84300EA2E59 /* DetailsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEFEDA23A1A84300EA2E59 /* DetailsAPI.swift */; };
+		52DEFEDD23A1A85E00EA2E59 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEFEDC23A1A85E00EA2E59 /* SummaryViewController.swift */; };
 		CD01CD5C232178AF002D0255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CD5B232178AF002D0255 /* AppDelegate.swift */; };
 		CD01CD5E232178AF002D0255 /* ShowsOnlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD01CD5D232178AF002D0255 /* ShowsOnlyViewController.swift */; };
 		CD01CD61232178AF002D0255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD01CD5F232178AF002D0255 /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 		52D54FD723A192FA00C5E00C /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		52D54FDA23A1933500C5E00C /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		52D54FDC23A1934300C5E00C /* EpisodesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesAPI.swift; sourceTree = "<group>"; };
+		52DEFED823A1A83500EA2E59 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		52DEFEDA23A1A84300EA2E59 /* DetailsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAPI.swift; sourceTree = "<group>"; };
+		52DEFEDC23A1A85E00EA2E59 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		CD01CD58232178AF002D0255 /* Pursuit-Core-iOS-Episodes-from-Online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pursuit-Core-iOS-Episodes-from-Online.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD01CD5B232178AF002D0255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD01CD5D232178AF002D0255 /* ShowsOnlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsOnlyViewController.swift; sourceTree = "<group>"; };
@@ -105,9 +111,20 @@
 			path = Episodes;
 			sourceTree = "<group>";
 		};
+		52DEFED723A1A80A00EA2E59 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				52DEFED823A1A83500EA2E59 /* Details.swift */,
+				52DEFEDA23A1A84300EA2E59 /* DetailsAPI.swift */,
+				52DEFEDC23A1A85E00EA2E59 /* SummaryViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		CD01CD4F232178AF002D0255 = {
 			isa = PBXGroup;
 			children = (
+				52DEFED723A1A80A00EA2E59 /* Details */,
 				52D54FD923A1931E00C5E00C /* Episodes */,
 				5226A22523A09B54001C084D /* Helpers */,
 				5226A22423A09B45001C084D /* Shows */,
@@ -250,7 +267,10 @@
 			files = (
 				5226A22B23A09C15001C084D /* Show.swift in Sources */,
 				5226A22923A09BBE001C084D /* AppError.swift in Sources */,
+				52DEFED923A1A83500EA2E59 /* Details.swift in Sources */,
+				52DEFEDB23A1A84300EA2E59 /* DetailsAPI.swift in Sources */,
 				CD01CD5E232178AF002D0255 /* ShowsOnlyViewController.swift in Sources */,
+				52DEFEDD23A1A85E00EA2E59 /* SummaryViewController.swift in Sources */,
 				52D54FDB23A1933500C5E00C /* Episode.swift in Sources */,
 				52D54FD823A192FA00C5E00C /* EpisodesViewController.swift in Sources */,
 				52D54FDD23A1934300C5E00C /* EpisodesAPI.swift in Sources */,
