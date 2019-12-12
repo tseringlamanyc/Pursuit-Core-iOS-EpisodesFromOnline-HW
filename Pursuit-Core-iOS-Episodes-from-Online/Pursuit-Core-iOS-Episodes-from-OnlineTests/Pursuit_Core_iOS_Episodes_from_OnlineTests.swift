@@ -33,6 +33,19 @@ class Pursuit_Core_iOS_Episodes_from_OnlineTests: XCTestCase {
         wait(for: [exp], timeout: 5.0)
     }
     
-    
-
+    func testEpisodeCount () {
+        let query = 169
+        let exp = XCTestExpectation(description: "episode found")
+        EpisodeAPI.getEpisodes(episodeNum: query) { (result) in
+            switch result {
+            case .failure(let appError):
+                XCTFail("\(appError)")
+            case .success(let episodeArr):
+                exp.fulfill()
+                XCTAssertEqual(episodeArr.count, 62)
+            }
+        }
+        wait(for: [exp], timeout: 5.0)
+    }
+     
 }
